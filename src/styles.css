@@ -1,103 +1,99 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
     margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-}
-
-header nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-}
-
-header nav ul li {
-    margin: 0 15px;
-}
-
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-main {
     padding: 20px;
+    color: #333;
 }
 
-.intro {
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #3498db;
+}
+
+h1 {
+    text-align: center;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.lyrics {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     margin-bottom: 20px;
 }
 
-.pricing-plans {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    justify-content: space-around;
-    align-items: flex-start;
+.lyrics p {
+    margin: 0;
+    line-height: 1.5;
+    color: cadetblue;
+    font-family: "fantasy";
+    font-weight: bold;
 }
 
-.pricing-plans h1, .free-plan h2, .payment-methods h2 {
+.lyrics p:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.lyrics p a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.lyrics p a:hover {
+    text-decoration: underline;
+}
+
+.youtube-link {
     text-align: center;
+    margin-top: 20px;
 }
 
-.plan {
-    margin: 20px 0;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    flex: 1;
-    max-width: 300px;
+.youtube-link img {
+    width: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
 }
 
-.plan h2 {
-    margin-top: 0;
+.youtube-link a {
+    color: #ff0000;
+    font-weight: bold;
+    text-decoration: none;
 }
 
-.price {
-    font-size: 1.5em;
-    color: #2c3e50;
+.youtube-link a:hover {
+    text-decoration: underline;
 }
 
-.plan ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 20px 0;
+.search-container {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.plan ul li {
-    margin: 5px 0;
+.search-container input {
+    padding: 10px;
+    font-size: 16px;
+    width: 80%;
+    max-width: 400px;
+    margin-right: 10px;
 }
 
-button {
-    background-color: #3498db;
-    color: #fff;
-    border: none;
+.search-container button {
     padding: 10px 20px;
-    border-radius: 5px;
+    font-size: 16px;
     cursor: pointer;
-}
-
-button:hover {
-    background-color: #2980b9;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 }
