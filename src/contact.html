@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CONTACT US</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="contact.css">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1>Contact Us</h1>
+    <form id="contact-info">
+        <label for="Name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+        <label for="Email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+        <label for="Message">Message:</label>
+        <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+
+        <button type="submit">SEND MESSAGE</button>
+    </form>
+</div>
+<div>
+    <h2>Contact Information</h2>
+    <p><i class="fa-solid fa-phone"></i> +264814651384</p>
+    <p><i class="fa-regular fa-envelope"></i> info@mydomain.com</p>
+    <p><i class="fa-regular fa-location-dot"></i> 729 Kahimemua Nguvauva, Windhoek, Namibia</p>
+</div>
+<div id="result"></div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        emailjs.init("your_service_id");
+
+        document.getElementById('contact-info').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            emailjs.send("your_service_id", "your_template_id", {
+                from_name: name,
+                from_email: email,
+                message_html: message
+            }).then(function(response) {
+                document.getElementById('result').innerText = "Message sent successfully!";
+            }, function(error) {
+                document.getElementById('result').innerText = "Failed to send!";
+            });
+        });
+    });
+</script>
+<script>
+    let loggedIn=false;
+    let username;
+    let password;
+    while (!loggedIn){
+        username=window.prompt("enter your username")
+        password=window.prompt("enter your password")
+
+        if (username==="myusername" && password==="mypassword"){
+            loggedIn=true;
+            console.log("you are logged in");
+        }
+        else {
+            console.log("invalid credentials");
+        }
+    }
+
+</script>
+</body>
+</html>

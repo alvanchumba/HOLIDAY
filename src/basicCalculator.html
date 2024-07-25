@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BASIC CALCULATOR PROGRAM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .container{
+            max-width: 600px;
+            margin: 100px auto;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f5f5f5;
+        }
+        .calculator{
+            padding: 20px;
+            text-align: center;
+            display: block;
+        }
+        .display{
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            background-color: #f5f5f5;
+            font-size: 24px;
+            border-radius: 10px;
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .container input{
+            border: none;
+            padding: 10px;
+            box-sizing: border-box;
+            background-color: #00e6e6;
+            font-size: 16px;
+            border-radius: 10px;
+            margin: 5px  5px;
+            width: 20%;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .social-media {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .social-media ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .social-media li {
+            margin: 0 10px;
+        }
+
+        .social-media a {
+            text-decoration: none;
+            color: white;
+            font-size: 24px;
+            transition: color 0.3s;
+        }
+
+        .social-media a:hover {
+            color: #0073e6;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+<form>
+    <div class="calculator">
+        <div class="display" id="display">0</div>
+    <div>
+        <input type="button" value="AC" onclick="clearDisplay()">
+        <input type="button" value="DE" onclick="deleteLast()">
+        <input type="button" value="*" onclick="appendToDisplay('*')" >
+        <input type="button" value="/" onclick="appendToDisplay('/')">
+    </div>
+    <div>
+        <input type="button" value="7" onclick="appendToDisplay('7')">
+        <input type="button" value="8" onclick="appendToDisplay('8')">
+        <input type="button" value="9" onclick="appendToDisplay('9')">
+        <input type="button" value="-" onclick="appendToDisplay('-')">
+    </div>
+    <div>
+        <input type="button" value="4" onclick="appendToDisplay('4')">
+        <input type="button" value="5" onclick="appendToDisplay('5')">
+        <input type="button" value="6" onclick="appendToDisplay('6')">
+        <input type="button" value="+" onclick="appendToDisplay('+')">
+    </div>
+    <div>
+        <input type="button" value="1" onclick="appendToDisplay('1')">
+        <input type="button" value="2" onclick="appendToDisplay('2')">
+        <input type="button" value="3" onclick="appendToDisplay('3')">
+        <input type="button" value="=" onclick="calculateResult('=')">
+    </div>
+    <div>
+        <input type="button" value="%" onclick="appendToDisplay('%')">
+        <input type="button" value="0" onclick="appendToDisplay('0')">
+        <input type="button" value="." onclick="appendToDisplay('.')">
+    </div>
+    </div>
+</form>
+</div>
+<script>
+    function clearDisplay(){
+        document.getElementById('display').innerText='0';
+    }
+    function deleteLast(){
+        let display=document.getElementById('display').innerText;
+        if (display.length>1){
+            document.getElementById('display').innerText=display.slice(0,-1);
+        }else {
+            document.getElementById('display').innerText='0';
+        }
+    }
+    function appendToDisplay(value){
+        let display=document.getElementById('display').innerText;
+        if (display==='0'){
+            document.getElementById('display').innerText=value;
+        }else {
+            document.getElementById('display').innerText += value;
+        }
+    }
+    function calculateResult(){
+        let display=document.getElementById('display').innerText;
+        try{
+            let result=eval(display);
+            document.getElementById('display').innerText=result;
+        }catch (e){
+            document.getElementById('display').innerText='Error';
+        }
+    }
+</script>
+
+<footer>
+    <div class="social-media">
+        <ul>
+            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href="https://www.instagram.com/alvankcnvl"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="https://wa.me/+264814651384"><i class="fa-brands fa-whatsapp"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-linkedin"></i></a> </li>
+            <li><a href="#"><i class="fa-brands fa-tiktok"></i></a> </li>
+        </ul>
+    </div>
+    <p>&copy;Alvan Chumba 2024 All Rights Reserved</p></footer>
+</body>
+</html>
