@@ -8,50 +8,133 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<header>
-    <h1>AKC</h1>
-    <nav class="nav-links">
+<nav class="navbar">
+    <a href="#" class="logo"><span>Alvan</span></a>
+    <div class="nav-links" id="navLinks">
         <ul>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#services">SERVICES</a></li>
+            <li><a href="#contact">CONTACT</a></li>
         </ul>
-    </nav>
-</header>
-
-<main>
-    <h1>WELCOME TO OUR WEBSITE</h1>
-    <p>Alvan Solutions is a company started on 19 July 2024 situated in Windhoek, Namibia. Our stakeholders have specialized in website design, we design and develop websites to your expectations. Whether for institutions, companies, or for individuals' personal needs.</p>
-    <button id="design-btn">DESIGN TODAY WITH US</button>
-
-    <div class="paymentmethods">
-        <input type="checkbox" id="subscribe" name="subscribe">
-        <label for="subscribe">SUBSCRIBE</label>
-        <br>
-        <input type="radio" id="visabtn" name="card">
-        <label for="visabtn">Visa</label>
-        <br>
-        <input type="radio" id="MastercardBtn" name="card">
-        <label for="MastercardBtn">MasterCard</label>
-        <br>
-        <input type="radio" id="paypalBtn" name="card">
-        <label for="paypalBtn">Paypal</label>
-        <br>
-        <button type="submit" id="mysubmit">SUBMIT</button>
-        <p id="subResult"></p>
-        <p id="paymentResult"></p>
     </div>
-
-    <div class="clock">
-        <span id="hrs">00</span>
-        <span>:</span>
-        <span id="min">00</span>
-        <span>:</span>
-        <span id="sec">00</span>
+    <i class="fa-solid fa-bars toggle-button" id="menu" onclick="toggleMenu()"></i>
+    <a href="#contact" class="btn">Contact Me</a>
+</nav>
+<section id="home">
+    <img src="https://photos.fife.usercontent.google.com/pw/AP1GczMXehoNdbsIfmot5IgoHv9XAnCf3tu4P4FE6H_T0FVTmIsx2je9ARBZ=w543-h724-s-no-gm?authuser=0" alt="">
+    <div class="info-box">
+        <h1><span>Hello, I'm Alvan</span></h1>
+        <h3><span>Web Developer</span>based in Windhoek</h3>
+        <p>Am a dedicated front-end developer with a knack for crafting stunning, responsive websites.
+            I combine creativity with technical expertise to build web solutions that not only look great but also perform flawlessly. From seamless navigation to interactive elements, my focus is on delivering exceptional user experiences. Whether you're looking to revamp your existing site or build a new one from scratch, I'm here to help you achieve your digital goals.
+            Explore my portfolio to see how I can turn your vision into reality and feel free to reach out if you're interested in collaborating!</p>
     </div>
-</main>
+</section>
+<section id="about">
+    <div class="about-box">
+        <div class="about-info">
+            <h1><span>About Me</span></h1>
+            <p>As a passionate front-end developer based in Windhoek, Namibia, I specialize in creating visually appealing and user-friendly websites that engage and captivate audiences. With a strong foundation in HTML, CSS, and JavaScript, I bring designs to life with clean, efficient code and innovative solutions. My experience spans across responsive design, ensuring that websites look and function seamlessly on all devices. I am adept at leveraging modern frameworks and libraries, including React and Bootstrap, to build dynamic, high-performance user interfaces. Driven by a commitment to excellence and a keen eye for detail,
+                I strive to exceed client expectations and deliver outstanding results</p>
+        </div>
+        <h2><span>Skills</span></h2>
+        <div class="skills">
+            <ul>
+                <li>
+                    <span><i class="fa-solid fa-chevron-right"></i>HTML</span>
+                </li>
+                <li>
+                    <span><i class="fa-solid fa-chevron-right"></i>CSS</span>
+                </li>
+                <li>
+                    <span><i class="fa-solid fa-chevron-right"></i>JavaScript</span>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <span><i class="fa-solid fa-chevron-right"></i>React</span>
+                </li>
+                <li>
+                    <span><i class="fa-solid fa-chevron-right"></i>Node</span>
+                </li>
+                <li>
+                    <span><i class="fa-solid fa-chevron-right"></i>MySQL</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <img src="" alt="">
+</section>
+<section id="services">
+    <div class="service-box">
+        <h2><span>Our Services</span></h2>
+        <div class="service-item">
+            <i class="fa-solid fa-code"></i>
+            <p>Web Development</p>
+        </div>
+        <div class="service-item">
+            <i class="fa-solid fa-paint-brush"></i>
+            <p>Web Design</p>
+        </div>
+        <div class="service-item">
+            <i class="fa-solid fa-mobile-alt"></i>
+            <p>Responsive Design</p>
+        </div>
+        <div class="service-item">
+            <i class="fa-solid fa-server"></i>
+            <p>Server Management</p>
+        </div>
+        <div class="service-item">
+            <i class="fa-solid fa-search"></i>
+            <p>SEO Optimization</p>
+        </div>
+    </div>
+</section>
+<section id="contact">
+    <div class="container">
+        <h1>Contact Us</h1>
+        <form id="contact-info">
+            <label for="Name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <label for="Email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <label for="Message">Message:</label>
+            <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+            <button type="submit">SEND MESSAGE</button>
+        </form>
+    </div>
+    <div>
+        <h2>Contact Information</h2>
+        <p><i class="fa-solid fa-phone"></i> +264814651384</p>
+        <p><i class="fa-regular fa-envelope"></i> info@mydomain.com</p>
+        <p><i class="fa-regular fa-location-dot"></i> 729 Kahimemua Nguvauva, Windhoek, Namibia</p>
+    </div>
+    <div id="result"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            emailjs.init("your_service_id");
 
+            document.getElementById('contact-info').addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+
+                emailjs.send("your_service_id", "your_template_id", {
+                    from_name: name,
+                    from_email: email,
+                    message_html: message
+                }).then(function(response) {
+                    document.getElementById('result').innerText = "Message sent successfully!";
+                }, function(error) {
+                    document.getElementById('result').innerText = "Failed to send!";
+                });
+            });
+        });
+    </script>
+</section>
 <footer>
     <div class="social-media">
         <ul>
@@ -59,13 +142,23 @@
             <li><a href="https://www.instagram.com/alvankcnvl"><i class="fa-brands fa-instagram"></i></a></li>
             <li><a href="https://wa.me/+264814651384"><i class="fa-brands fa-whatsapp"></i></a></li>
             <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
-            <li><a href="#"><i class="fa-brands fa-linkedin"></i></a> </li>
-            <li><a href="#"><i class="fa-brands fa-tiktok"></i></a> </li>
+            <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
         </ul>
     </div>
     <p>&copy; 2024 Alvan Chumba. All Rights Reserved.</p>
 </footer>
 
-<script src="index.js"></script>
+<script>
+    function toggleMenu() {
+        const navLinks = document.getElementById('navLinks');
+        if (navLinks.style.display === 'flex') {
+            navLinks.style.display = 'none';
+        } else {
+            navLinks.style.display = 'flex';
+        }
+    }
+</script>
 </body>
 </html>
+
